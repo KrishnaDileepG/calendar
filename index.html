@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>KD calendar</title>
 
   <style>
-    *{
+    * {
       margin: 0;
       padding: 0;
     }
-    body{
+
+    body {
       box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
     }
 
-    .container{
-      width:50%;
-      background-image: url(images/bg-image.webp);
+    .container {
+      width: 60%;
+      background: linear-gradient(#c78533, #dd526e);
       background-size: cover;
-      text-align: center;
-      float: left;
-      overflow: hidden;
+      text-align: start;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
 
     .row {
-      display: block;
-    }
-
-    .month-container {
-      display: inline-block;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
 
     .structure {
@@ -34,58 +38,60 @@
       display: inline-block;
       color: aliceblue;
     }
-    
-    th{
-      color:rgb(234, 237, 14)
+
+    th {
+      color: rgb(234, 237, 14);
+      text-align: start;
     }
 
-    .month-container :hover{
-      background-color: brown;
+    td:hover {
+      box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+      text-align: center;
     }
 
     h3 {
-      font-size: 20px;
+      font-size: 1.3rem;
       color: black;
     }
 
 
     .about-container {
-      width:50%;
-      overflow: hidden;
-      float: left;
-      background-image: url(images/bg-image.jpg);
+      width: 40%;
+      background: linear-gradient(45deg, #d0de65, #853c4b);
       background-size: cover;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
+
     .fancy-text {
-    margin-right: 10px;
-    text-align: right;
-    font-size: 150px; 
-    font-weight: bold;
-    background-image: url('images/shuffled-numbers.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-clip: text;
-    color: transparent; 
-}
+      margin-right: 1rem;
+      text-align: right;
+      font-size: 7rem;
+      font-weight: bold;
+      background-image: url('images/shuffled-numbers.jpg');
+      background-size: cover;
+      background-position: center;
+      background-clip: text;
+      color: transparent;
+    }
 
-.description{
-  margin-top: 40px;
-  text-align: center;
-  padding: 5%;
-  font-size: 30px;
-  font-weight: medium;
-}
+    .description {
+      margin-top: 1em;
+      text-align: center;
+      padding: 5%;
+      font-size: 2rem;
+      font-weight: medium;
+    }
 
-.container, .about-container {
-  min-height: 154vh; 
-  overflow: hidden;
-}
-    
+    .container,
+    .about-container {
+      height: 100vh;
+      overflow:scroll;
+    }
   </style>
 
-
-
 </head>
+
 <body>
   <main class="container">
     <div class="row">
@@ -216,10 +222,10 @@
           </tbody>
         </table>
       </div>
-    </div>
-    <div class="row">
+
 
       <div class="month-container">
+
         <h3>March</h3>
         <table class="structure" cellspacing="16">
           <thead>
@@ -283,6 +289,8 @@
         </table>
       </div>
 
+    </div>
+    <div class="row">
       <div class="month-container">
         <h3>April</h3>
         <table class="structure" cellspacing="16">
@@ -346,10 +354,6 @@
           </tbody>
         </table>
       </div>
-    </div>
-
-    <div class="row">
-
       <div class="month-container">
         <h3>May</h3>
         <table class="structure" cellspacing="16">
@@ -483,7 +487,7 @@
 
       <div class="month-container">
         <h3>July</h3>
-        <table class="structure" cellspacing="16">
+        <table class="structure" cellspacing="18">
           <thead>
             <tr>
               <th>Sun</th>
@@ -608,10 +612,6 @@
           </tbody>
         </table>
       </div>
-    </div>
-
-    <div class="row">
-
       <div class="month-container">
         <h3>September</h3>
         <table class="structure" cellspacing="16">
@@ -675,6 +675,9 @@
           </tbody>
         </table>
       </div>
+    </div>
+
+    <div class="row">
 
       <div class="month-container">
         <h3>October</h3>
@@ -739,10 +742,6 @@
           </tbody>
         </table>
       </div>
-    </div>
-
-    <div class="row">
-
       <div class="month-container">
         <h3>November</h3>
         <table class="structure" cellspacing="16">
@@ -871,13 +870,15 @@
         </table>
       </div>
     </div>
+
   </main>
 
   <div class="about-container">
     <h2 class="fancy-text" style="text-align: center; margin-top: 100px;">2025</h2>
-    <h2 class="fancy-text" style="border-bottom: 3px solid black;"> KD Calendars</h2>
+    <h2 class="fancy-text" style="border-bottom: 3px solid black;"> KD Calendar</h2>
     <p class="description">
-      KD Calendars is your perfect companion for staying organized throughout the year. Designed with clarity and style, our calendars help you plan your days efficiently, whether for personal use, work schedules, or special events.
+      KD Calendars is your perfect companion for staying organized throughout the year. Designed with clarity and style,
+      our calendars help you plan your days efficiently, whether for personal use, work schedules, or special events.
     </p>
 
   </div>
